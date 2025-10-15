@@ -1,0 +1,737 @@
+[
+  {
+    "sno": 1,
+    "title": "Contains Duplicate",
+    "problem": "Given an integer array nums, return true if any value appears more than once in the array, otherwise return false.",
+    "hint": "A brute force solution would be to check every element against every other element in the array. This would be an O(n^2) solution. Can you think of a better way?",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  },
+  {
+    "sno": 2,
+    "title": "Valid Anagram",
+    "problem": "Given two strings s and t, return true if the two strings are anagrams of each other, else return false.",
+    "hint": "A brute force solution would be to sort the given strings and check for their equality. This would be an O(nlogn + mlogm) solution. Can you think of a better way without sorting the strings?",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 3,
+    "title": "Minimum Window Substring",
+    "problem": "Given two strings s and t, return the minimum window in s which contains all the characters of t.",
+    "hint": "Try using two pointers and a hash map to expand and contract the window.",
+    "recommended_time_space": "You should aim for O(n) time and O(m) space."
+  },
+  {
+    "sno": 4,
+    "title": "Palindromic Substrings",
+    "problem": "Given a string s, return the number of palindromic substrings in it.",
+    "hint": "Try expanding around every possible center.",
+    "recommended_time_space": "You should aim for O(n^2) time and O(1) space."
+  },
+  {
+    "sno": 5,
+    "title": "Serialize and Deserialize Binary Tree",
+    "problem": "Design an algorithm to serialize and deserialize a binary tree.",
+    "hint": "You can use BFS or DFS traversal; remember to handle null children.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  },
+  {
+    "sno": 6,
+    "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+    "problem": "Given preorder and inorder traversal of a tree, construct the binary tree.",
+    "hint": "Root is the first element in preorder and split inorder by root.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  },
+  {
+    "sno": 7,
+    "title": "Binary Tree Level Order Traversal II",
+    "problem": "Given the root of a binary tree, return the bottom-up level order traversal of its nodes' values.",
+    "hint": "Gather levels top-down and reverse at the end.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  },
+  {
+    "sno": 8,
+    "title": "Kth Smallest Element in a BST",
+    "problem": "Given a binary search tree, find the k-th smallest element in it.",
+    "hint": "Try using in-order traversal for BST.",
+    "recommended_time_space": "You should aim for O(h + k) time and O(h) space."
+  },
+  {
+    "sno": 9,
+    "title": "Merge k Sorted Lists",
+    "problem": "Merge k sorted linked lists and return it as one sorted list.",
+    "hint": "Use a min-heap or merge pairwise recursively.",
+    "recommended_time_space": "You should aim for O(N log k) time and O(N) space, where N is the total number of nodes."
+  },
+  {
+    "sno": 10,
+    "title": "Clone Graph",
+    "problem": "Given a reference node to a graph, return a deep copy (clone) of the graph.",
+    "hint": "Use DFS or BFS with a map to track copied nodes.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space, where n is the # of nodes."
+  },
+  {
+    "sno": 11,
+    "title": "Graph Valid Tree",
+    "problem": "Given n nodes labeled 0 to n-1 and a list of edges, determine if it's a valid tree.",
+    "hint": "Check for cycles and that all nodes are connected.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  },
+  {
+    "sno": 12,
+    "title": "Number of Connected Components in an Undirected Graph",
+    "problem": "Given n nodes and a list of undirected edges, return the number of connected components.",
+    "hint": "Use DFS/BFS to visit each component.",
+    "recommended_time_space": "You should aim for O(n + e) time and O(n) space, where e = #edges."
+  },
+  {
+    "sno": 13,
+    "title": "Word Search",
+    "problem": "Given an m x n board and a word, determine if the word exists in the grid by moving horizontally or vertically.",
+    "hint": "Try DFS for each letter and mark visited cells.",
+    "recommended_time_space": "You should aim for O(m*n*L) time and O(L) space, where L = word length."
+  },
+  {
+    "sno": 14,
+    "title": "Pacific Atlantic Water Flow",
+    "problem": "Given an m x n matrix, return list of grid coordinates where water can flow to both Pacific and Atlantic.",
+    "hint": "Reverse the flow: start from oceans and mark reachable cells with DFS/BFS.",
+    "recommended_time_space": "You should aim for O(m*n) time and O(m*n) space."
+  },
+  {
+    "sno": 15,
+    "title": "Alien Dictionary",
+    "problem": "Given a sorted dictionary of an alien language, return a possible order of the letters.",
+    "hint": "Create a graph of precedence and use topological sort.",
+    "recommended_time_space": "You should aim for O(c) time and O(c) space, where c = total characters."
+  },
+  {
+    "sno": 16,
+    "title": "Course Schedule II",
+    "problem": "Given numCourses and prerequisites, return the ordering of courses you should take to finish all.",
+    "hint": "Topological sort helps if no cycles; otherwise, it's impossible.",
+    "recommended_time_space": "You should aim for O(V + E) time and O(V) space."
+  },
+  {
+    "sno": 17,
+    "title": "Word Ladder",
+    "problem": "Given two words (beginWord and endWord), and a dictionary, return the number of steps in the shortest sequence to transform beginWord to endWord.",
+    "hint": "Use BFS, changing one letter at a time.",
+    "recommended_time_space": "You should aim for O(N*M^2) time and O(N*M) space, where N = word list size, M = word length."
+  },
+  {
+    "sno": 18,
+    "title": "Combination Sum",
+    "problem": "Given an array of distinct integers candidates and an integer target, return all unique combinations of candidates that sum to target.",
+    "hint": "Use backtracking to build up solutions.",
+    "recommended_time_space": "You should aim for O(2^n) time and O(target) space."
+  },
+  {
+    "sno": 19,
+    "title": "Permutations",
+    "problem": "Given a collection of distinct integers, return all possible permutations.",
+    "hint": "Use backtracking and swap elements to build each permutation.",
+    "recommended_time_space": "You should aim for O(n!) time and O(n) space."
+  },
+  {
+    "sno": 20,
+    "title": "Subsets",
+    "problem": "Given an integer array nums, return all possible subsets (the power set).",
+    "hint": "For each element, decide whether to include it or not. Use backtracking.",
+    "recommended_time_space": "You should aim for O(n*2^n) time and O(n*2^n) space."
+  },
+  {
+    "sno": 21,
+    "title": "Combination Sum II",
+    "problem": "Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations where candidates may only be used once.",
+    "hint": "Sort candidates, use backtracking, and skip duplicates to avoid same combinations.",
+    "recommended_time_space": "You should aim for O(2^n) time and O(target) space."
+  },
+  {
+    "sno": 22,
+    "title": "Word Search II",
+    "problem": "Given a 2D board and a list of words, find all words in the board.",
+    "hint": "Use a Trie and DFS to improve search efficiency.",
+    "recommended_time_space": "You should aim for O(N*L), N = board size, L = total length of words."
+  },
+  {
+    "sno": 23,
+    "title": "Sudoku Solver",
+    "problem": "Write a program to solve a Sudoku puzzle by filling empty cells.",
+    "hint": "Backtracking to fill each cell, check valid placement.",
+    "recommended_time_space": "You should aim for O(9^m) time, where m is #empty cells."
+  },
+  {
+    "sno": 24,
+    "title": "N-Queens",
+    "problem": "The n-queens puzzle is to place n queens on an n x n chessboard so that no two queens attack each other.",
+    "hint": "Use backtracking with row, column, and diagonal constraints.",
+    "recommended_time_space": "You should aim for O(n!) time."
+  },
+  {
+    "sno": 25,
+    "title": "Graph Clone",
+    "problem": "Clone an undirected graph. Each node contains a value and a list of its neighbors.",
+    "hint": "Use DFS/BFS with a visited map.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  },
+  {
+    "sno": 26,
+    "title": "Number of Islands",
+    "problem": "Given a 2D grid map of '1's and '0's, count the number of islands.",
+    "hint": "Use BFS or DFS to explore each island from a found '1'.",
+    "recommended_time_space": "You should aim for O(mn) time and O(mn) space."
+  },
+  {
+    "sno": 27,
+    "title": "Flood Fill",
+    "problem": "Given an image (2D array) and a starting pixel, flood fill the image using a new color.",
+    "hint": "Use BFS or DFS to recolor all connected pixels.",
+    "recommended_time_space": "You should aim for O(mn) time and O(mn) space."
+  },
+  {
+    "sno": 28,
+    "title": "Set Matrix Zeroes",
+    "problem": "Given an m x n integer matrix, if an element is 0, set its entire row and column to 0.",
+    "hint": "Can you do this in place? Try using extra space first, then reduce it.",
+    "recommended_time_space": "You should aim for O(mn) time and O(1) extra space."
+  },
+  {
+    "sno": 29,
+    "title": "Spiral Matrix",
+    "problem": "Given an m x n matrix, return all elements in spiral order.",
+    "hint": "Keep track of the current bounds as you spiral over the matrix.",
+    "recommended_time_space": "You should aim for O(mn) time and O(1) space."
+  },
+  {
+    "sno": 30,
+    "title": "Rotate Image",
+    "problem": "You are given an n x n 2D matrix representing an image. Rotate the image by 90 degrees (clockwise), in place.",
+    "hint": "Transpose, then reverse each row, or swap four elements in cycles directly.",
+    "recommended_time_space": "You should aim for O(n^2) time and O(1) space."
+  },
+  {
+    "sno": 31,
+    "title": "Group Anagrams",
+    "problem": "Given an array of strings, group anagrams together.",
+    "hint": "Sort each string and use as dictionary key.",
+    "recommended_time_space": "You should aim for O(n*k*log(k)) time where k is avg string length."
+  },
+  {
+    "sno": 32,
+    "title": "Maximum Subarray",
+    "problem": "Given an integer array nums, find the contiguous subarray with the largest sum.",
+    "hint": "Try modifying the running sum as you iterate (Kadane’s algorithm).",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 33,
+    "title": "Coin Change",
+    "problem": "Given coins and an amount, compute the minimum number of coins to make the amount.",
+    "hint": "Try dynamic programming, storing best answer for every amount up to target.",
+    "recommended_time_space": "You should aim for O(amount * coins.length) time."
+  },
+  {
+    "sno": 34,
+    "title": "Climbing Stairs",
+    "problem": "You are climbing a staircase. Each time you can take 1 or 2 steps. How many distinct ways can you climb to the top?",
+    "hint": "Think of it as a Fibonacci recurrence (DP).",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 35,
+    "title": "Longest Increasing Subsequence",
+    "problem": "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+    "hint": "Try DP; can you improve the naive O(n^2) approach?",
+    "recommended_time_space": "You should aim for O(n^2) time or O(n log n) if optimized."
+  },
+  {
+    "sno": 36,
+    "title": "Longest Common Subsequence",
+    "problem": "Given two strings, return the length of their longest common subsequence.",
+    "hint": "Classic DP: use a 2D table where each cell depends on previous cells.",
+    "recommended_time_space": "You should aim for O(mn) time and O(mn) space."
+  },
+  {
+    "sno": 37,
+    "title": "Word Break",
+    "problem": "Given a string and a dictionary of words, determine if the string can be segmented into a space-separated sequence of dictionary words.",
+    "hint": "Dynamic programming to check word breaks up to each index.",
+    "recommended_time_space": "You should aim for O(n^2) time and O(n) space."
+  },
+  {
+    "sno": 38,
+    "title": "House Robber",
+    "problem": "Given a list of non-negative integers representing the amount of money in each house, determine the maximum amount of money you can rob without robbing adjacent houses.",
+    "hint": "Think recursively: at each house, you can rob it or skip it. Use dynamic programming.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 39,
+    "title": "House Robber II",
+    "problem": "Similar to House Robber, but houses are arranged in a circle.",
+    "hint": "Solve twice: once excluding the first house, once excluding the last.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 40,
+    "title": "Decode Ways",
+    "problem": "Given a string containing only digits, determine the total number of ways to decode it.",
+    "hint": "Use DP — the answer for a prefix depends on previous 1–2 digits.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  },
+  {
+    "sno": 41,
+    "title": "Unique Paths",
+    "problem": "A robot is located at the top-left corner of an m x n grid. How many unique paths are there to the bottom-right corner (only right and down)?",
+    "hint": "Dynamic programming: each cell’s answer is the sum of the answers from the cell above and to the left.",
+    "recommended_time_space": "You should aim for O(mn) time and O(mn) or O(n) space."
+  },
+  {
+    "sno": 42,
+    "title": "Jump Game",
+    "problem": "Given an array of non-negative integers, each representing your maximum jump length per position, determine if you can reach the last index.",
+    "hint": "Keep track of the furthest index you can reach as you iterate.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 43,
+    "title": "Search in Rotated Sorted Array",
+    "problem": "Given a rotated sorted array, search for a target value and return its index, or -1 if not found.",
+    "hint": "Binary search with conditions for rotated halves.",
+    "recommended_time_space": "You should aim for O(log n) time and O(1) space."
+  },
+  {
+    "sno": 44,
+    "title": "Find Minimum in Rotated Sorted Array",
+    "problem": "Given a rotated sorted array, find the minimum element.",
+    "hint": "Binary search to find the inflection point.",
+    "recommended_time_space": "You should aim for O(log n) time and O(1) space."
+  },
+  {
+    "sno": 45,
+    "title": "Search in Rotated Sorted Array II",
+    "problem": "Given a rotated sorted array that may contain duplicates, check if a target value exists in the array.",
+    "hint": "Carefully handle duplicates and use binary search.",
+    "recommended_time_space": "You should aim for O(log n) time (linear if many duplicates) and O(1) space."
+  },
+  {
+    "sno": 46,
+    "title": "Median of Two Sorted Arrays",
+    "problem": "Given two sorted arrays nums1 and nums2, return the median of the two arrays.",
+    "hint": "Binary search and divide-and-conquer can achieve logarithmic time.",
+    "recommended_time_space": "You should aim for O(log(min(n, m))) time and O(1) space."
+  },
+  {
+    "sno": 47,
+    "title": "Kth Largest Element in an Array",
+    "problem": "Given an integer array nums and an integer k, return the kth largest element in the array.",
+    "hint": "Use a min heap of size k, or quickselect (partition algorithm).",
+    "recommended_time_space": "You should aim for O(n) average time and O(1) space."
+  },
+  {
+    "sno": 48,
+    "title": "Top K Frequent Elements",
+    "problem": "Given an integer array nums and an integer k, return the k most frequent elements.",
+    "hint": "Bucket sort or heap based on frequencies.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  },
+  {
+    "sno": 49,
+    "title": "Find K Closest Elements",
+    "problem": "Given a sorted array and two integers k and x, return the k closest integers to x in the array.",
+    "hint": "Binary search for the best left bound, then use a window.",
+    "recommended_time_space": "You should aim for O(log(n-k) + k) time and O(k) space."
+  },
+  {
+    "sno": 50,
+    "title": "Sliding Window Maximum",
+    "problem": "Given an array nums and an integer k, return the maximum value in each sliding window of size k.",
+    "hint": "Try using a deque to keep track of the useful elements.",
+    "recommended_time_space": "You should aim for O(n) time and O(k) space."
+  },
+  {
+    "sno": 51,
+    "title": "Subarray Sum Equals K",
+    "problem": "Given an array of integers and an integer k, return the total number of subarrays whose sum equals k.",
+    "hint": "Use a hashmap to track running sums seen so far.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  },
+  {
+    "sno": 52,
+    "title": "Minimum Size Subarray Sum",
+    "problem": "Given an array of positive integers nums and an integer target, return the minimal length of a subarray sum ≥ target. If none, return 0.",
+    "hint": "Try a sliding window approach, moving left pointer when current sum ≥ target.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 53,
+    "title": "Longest Substring with At Most K Distinct Characters",
+    "problem": "Given a string s and an integer k, return the length of the longest substring with at most k distinct characters.",
+    "hint": "Use a sliding window with a hashmap to count unique characters in current window.",
+    "recommended_time_space": "You should aim for O(n) time and O(k) space."
+  },
+  {
+    "sno": 54,
+    "title": "Longest Repeating Character Replacement",
+    "problem": "Given a string s and an integer k, return the length of the longest substring containing the same letter, after replacing up to k letters.",
+    "hint": "Use a sliding window, track the max frequency in current window.",
+    "recommended_time_space": "You should aim for O(n) time and O(26) space."
+  },
+  {
+    "sno": 55,
+    "title": "Permutation in String",
+    "problem": "Given two strings s1 and s2, return true if s2 contains a permutation of s1.",
+    "hint": "Compare character frequency counts using a sliding window.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 56,
+    "title": "Find All Anagrams in a String",
+    "problem": "Given a string s and a string p, return all start indices of p's anagrams in s.",
+    "hint": "Sliding window with character count arrays/hashes.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 57,
+    "title": "Longest Substring with At Most Two Distinct Characters",
+    "problem": "Given a string s, return the length of the longest substring with at most two distinct characters.",
+    "hint": "Sliding window and hashmap — similar to previous K-distinct problem, set k=2.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 58,
+    "title": "Find All Duplicates in an Array",
+    "problem": "Given an integer array nums of length n with numbers in the range 1 to n, find all elements that appear twice.",
+    "hint": "Mark seen indices as negative in place.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space (excluding output)."
+  },
+  {
+    "sno": 59,
+    "title": "Find the Duplicate Number",
+    "problem": "Given an array of n+1 integers where each integer is between 1 and n, find the duplicate one.",
+    "hint": "Use cycle detection (Floyd's Tortoise and Hare) or binary search.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 60,
+    "title": "Missing Number",
+    "problem": "Given an array containing n distinct numbers, return the missing number.",
+    "hint": "Sum, XOR, or mark in place.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 61,
+    "title": "First Missing Positive",
+    "problem": "Given an unsorted integer array, find the smallest missing positive integer.",
+    "hint": "Index marking: use value as index to place correct number at index, then scan.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 62,
+    "title": "Find Peak Element",
+    "problem": "Given an input array nums, find a peak element and return its index. An element is a peak if it is greater than its neighbors.",
+    "hint": "Binary search can be used since you only need to compare neighbors.",
+    "recommended_time_space": "You should aim for O(log n) time and O(1) space."
+  },
+  {
+    "sno": 63,
+    "title": "Search a 2D Matrix",
+    "problem": "Given an m x n matrix and a target, return true if the target exists in the matrix.",
+    "hint": "Use binary search by treating the matrix as a sorted array.",
+    "recommended_time_space": "You should aim for O(log(mn)) time and O(1) space."
+  },
+  {
+    "sno": 64,
+    "title": "Search a 2D Matrix II",
+    "problem": "Given an m x n matrix, return true if the target exists in the matrix. Each row and column is sorted.",
+    "hint": "Start from top-right, move left or down based on comparison.",
+    "recommended_time_space": "You should aim for O(m+n) time and O(1) space."
+  },
+  {
+    "sno": 65,
+    "title": "Merge Sorted Array",
+    "problem": "You are given two integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array in-place.",
+    "hint": "Start filling nums1 from the end using two pointers.",
+    "recommended_time_space": "You should aim for O(n+m) time and O(1) space."
+  },
+  {
+    "sno": 66,
+    "title": "Majority Element",
+    "problem": "Given an array of size n, find the majority element (> n/2 times).",
+    "hint": "Voting algorithm (Boyer-Moore) or hash counting.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 67,
+    "title": "Majority Element II",
+    "problem": "Given an array, find all elements that appear more than ⌊ n/3 ⌋ times.",
+    "hint": "At most two majority elements; extend Boyer-Moore algorithm.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 68,
+    "title": "Excel Sheet Column Number",
+    "problem": "Given a string columnTitle representing the column title as in Excel, return its corresponding column number.",
+    "hint": "Treat as a number in base 26 (A=1, B=2, ...).",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 69,
+    "title": "Valid Number",
+    "problem": "Validate if a string can be interpreted as a decimal number.",
+    "hint": "Use a finite automaton or careful state simulation.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 70,
+    "title": "Pow(x, n)",
+    "problem": "Implement pow(x, n), which calculates x raised to the power n.",
+    "hint": "Exponentiation by squaring (divide and conquer recursion or loop).",
+    "recommended_time_space": "You should aim for O(log n) time and O(1) space."
+  },
+  {
+    "sno": 71,
+    "title": "Spiral Matrix II",
+    "problem": "Given an integer n, generate an n x n matrix filled with elements from 1 to n^2 in spiral order.",
+    "hint": "Keep track of the current bounds and fill in layers.",
+    "recommended_time_space": "You should aim for O(n^2) time and O(1) space."
+  },
+  {
+    "sno": 72,
+    "title": "Rotate List",
+    "problem": "Given the head of a linked list, rotate the list to the right by k places.",
+    "hint": "Find the length, connect end to start, break at new head.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 73,
+    "title": "Linked List Cycle II",
+    "problem": "Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return null.",
+    "hint": "Use slow and fast pointers; once they meet, move from head and meeting point together.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 74,
+    "title": "LRU Cache",
+    "problem": "Design and implement a data structure for Least Recently Used (LRU) cache with get and put operations.",
+    "hint": "Double linked list and hashmap enable O(1) operations.",
+    "recommended_time_space": "You should aim for O(1) time and O(capacity) space per operation."
+  },
+  {
+    "sno": 75,
+    "title": "Min Stack",
+    "problem": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",
+    "hint": "Store current min for each value pushed.",
+    "recommended_time_space": "You should aim for O(1) time and O(n) space per operation."
+  },
+  {
+    "sno": 76,
+    "title": "Binary Search Tree Iterator",
+    "problem": "Implement an iterator for a binary search tree (BST) with next and hasNext methods.",
+    "hint": "Inorder traversal using a stack.",
+    "recommended_time_space": "You should aim for O(1) amortized time per call and O(h) space."
+  },
+  {
+    "sno": 77,
+    "title": "Summary Ranges",
+    "problem": "Given a sorted integer array, return the smallest sorted list of ranges that cover all numbers in the array.",
+    "hint": "Traverse and merge consecutive numbers into ranges.",
+    "recommended_time_space": "You should aim for O(n) time and O(1) space."
+  },
+  {
+    "sno": 78,
+    "title": "Implement Queue using Stacks",
+    "problem": "Implement a first in first out (FIFO) queue using only two stacks.",
+    "hint": "Push to one stack, pop/peek from the other. Rebalance as needed.",
+    "recommended_time_space": "You should aim for O(1) amortized time per operation."
+  },
+  {
+    "sno": 79,
+    "title": "Implement Stack using Queues",
+    "problem": "Implement a last in first out (LIFO) stack using only two queues.",
+    "hint": "Push to one queue, for pop/peek move all but one to other queue.",
+    "recommended_time_space": "You should aim for O(n) time for pop/peek, O(1) space."
+  },
+  {
+    "sno": 80,
+    "title": "Design Circular Queue",
+    "problem": "Design a circular queue that supports enqueue, dequeue, front, rear, and checking if the queue is full or empty.",
+    "hint": "Use an array with head, tail pointers and a size counter.",
+    "recommended_time_space": "You should aim for O(1) time per operation."
+  },
+  {
+    "sno": 81,
+    "title": "Design Circular Deque",
+    "problem": "Design a circular deque that supports adding and deleting elements from front or rear, checking if it's full or empty.",
+    "hint": "Array with head, tail pointers, circularly increasing indices.",
+    "recommended_time_space": "You should aim for O(1) time per operation."
+  },
+  {
+    "sno": 82,
+    "title": "Implement Trie (Prefix Tree)",
+    "problem": "Implement a trie with insert, search, and startsWith methods.",
+    "hint": "Use a tree-like node structure for each character.",
+    "recommended_time_space": "You should aim for O(m) time per operation, where m is the word length."
+  },
+  {
+    "sno": 83,
+    "title": "Add and Search Word - Data structure design",
+    "problem": "Design a data structure that supports adding words and searching with '.' as wildcard.",
+    "hint": "DFS for search, trie for fast prefix search.",
+    "recommended_time_space": "You should aim for O(m) time per operation."
+  },
+  {
+    "sno": 84,
+    "title": "Word Dictionary",
+    "problem": "Design a word dictionary that supports adding and searching with '.' as wildcard.",
+    "hint": "Similar to previous, use a trie and DFS for dot searches.",
+    "recommended_time_space": "You should aim for O(m) time per operation."
+  },
+  {
+    "sno": 85,
+    "title": "Implement Magic Dictionary",
+    "problem": "Design a dictionary structure for searching if a word can be formed by modifying exactly one character.",
+    "hint": "For each word, store all possible wildcards for one character changed.",
+    "recommended_time_space": "You should aim for O(n*m) time for build."
+  },
+  {
+    "sno": 86,
+    "title": "Replace Words",
+    "problem": "Given a dictionary and a sentence, replace words in sentence with root of the dictionary.",
+    "hint": "Use trie for fast prefix lookup.",
+    "recommended_time_space": "You should aim for O(n*m) time."
+  },
+  {
+    "sno": 87,
+    "title": "Find Words That Can Be Formed by Characters",
+    "problem": "Given an array of words and string chars, find the sum length of words that can be formed with chars (each letter used at most once).",
+    "hint": "Count chars frequency and check for each word.",
+    "recommended_time_space": "You should aim for O(N*M) time."
+  },
+  {
+    "sno": 88,
+    "title": "Search Suggestions System",
+    "problem": "Given an array of strings products and a string searchWord, return a list of 3 product suggestions after each character is typed. Suggestions should be sorted.",
+    "hint": "Use trie + min-heap or sort & binary search for prefix matches.",
+    "recommended_time_space": "You should aim for O(n log n) time or O(nk) for trie-based, n = product count, k = searchWord length."
+  },
+  {
+    "sno": 89,
+    "title": "Design Add and Search Words Data Structure",
+    "problem": "Implement addWord and searchWord methods. SearchWord may contain '.' as wildcard.",
+    "hint": "Trie + DFS for searching wildcards.",
+    "recommended_time_space": "You should aim for O(m) time per operation, m = max word length."
+  },
+  {
+    "sno": 90,
+    "title": "Design Search Autocomplete System",
+    "problem": "Design a search autocomplete system for sentences, returning top k matching sentences for current prefix.",
+    "hint": "Trie nodes store sentence frequencies.",
+    "recommended_time_space": "You should aim for O(k) retrieval time, k = top results."
+  },
+  {
+    "sno": 91,
+    "title": "Longest Word in Dictionary",
+    "problem": "Given a list of words, find the longest word made of other words in the list.",
+    "hint": "Sort by length, use trie for prefix lookup on all substrings.",
+    "recommended_time_space": "You should aim for O(nk) time, n = word count, k = max word length."
+  },
+  {
+    "sno": 92,
+    "title": "Word Break II",
+    "problem": "Given a string and dictionary, return all possible sentences where each word is in the dictionary.",
+    "hint": "Recursion + DP memoization for breaking sentences.",
+    "recommended_time_space": "You should aim for O(2^n) time."
+  },
+  {
+    "sno": 93,
+    "title": "Palindrome Partitioning",
+    "problem": "Given a string s, partition s such that every substring is a palindrome.",
+    "hint": "DFS all possible partitions, check palindrome at each cut.",
+    "recommended_time_space": "You should aim for O(2^n) time and O(n^2) for palindrome precomputation."
+  },
+  {
+    "sno": 94,
+    "title": "Restore IP Addresses",
+    "problem": "Given a string s containing digits, return all possible valid IP address combinations.",
+    "hint": "Try all splits, check validity at each step (length and value).",
+    "recommended_time_space": "You should aim for O(1) per answer, total O(n^3)."
+  },
+  {
+    "sno": 95,
+    "title": "Expression Add Operators",
+    "problem": "Given a string num and a target, insert operators (+,-,*) so the expression evaluates to target.",
+    "hint": "DFS recursive backtracking: track current value and last used value for multiplication.",
+    "recommended_time_space": "You should aim for O(4^n) time for n = num length."
+  },
+  {
+    "sno": 96,
+    "title": "Remove Invalid Parentheses",
+    "problem": "Remove minimum number of parentheses to make the string valid, return all possible results.",
+    "hint": "BFS and track levels, stop when first valid found.",
+    "recommended_time_space": "You should aim for O(n!) time for n = string size."
+  },
+  {
+    "sno": 97,
+    "title": "Generate Parentheses",
+    "problem": "Given n pairs of parentheses, generate all valid combinations.",
+    "hint": "Recursive backtracking – add '(' or ')' when allowed.",
+    "recommended_time_space": "You should aim for O(2^n) time, n = number of pairs."
+  },
+  {
+    "sno": 98,
+    "title": "Lowest Common Ancestor of a Binary Tree",
+    "problem": "Given a binary tree and two nodes, find their lowest common ancestor.",
+    "hint": "Postorder DFS and look for splits from both children.",
+    "recommended_time_space": "You should aim for O(n) time and O(h) space."
+  },
+  {
+    "sno": 99,
+    "title": "Design Twitter",
+    "problem": "Design the Twitter class that supports posting tweets, retrieving the news feed, and following/unfollowing other users.",
+    "hint": "Use heaps to keep a sliding window of recent tweets, plus adjacency lists.",
+    "recommended_time_space": "You should aim for O(log n) for retrieval, where n = number of tweets."
+  },
+  {
+    "sno": 100,
+    "title": "Find Median from Data Stream",
+    "problem": "Design a data structure that can return the median of incoming numbers in O(log n) time.",
+    "hint": "Two heaps: max-heap for lower half, min-heap for upper half.",
+    "recommended_time_space": "You should aim for O(log n) time per insert and O(1) for median."
+  },
+  {
+    "sno": 101,
+    "title": "Insert Delete GetRandom O(1)",
+    "problem": "Implement a data structure that supports insert, delete, and getRandom (all O(1) average time).",
+    "hint": "HashMap + ArrayList lets you swap and remove in O(1) time.",
+    "recommended_time_space": "You should aim for O(1) for all operations."
+  },
+  {
+    "sno": 102,
+    "title": "LFU Cache",
+    "problem": "Design and implement a data structure for Least Frequently Used (LFU) cache with O(1) get and put.",
+    "hint": "Frequency table with double linked lists for each frequency, plus a hashmap.",
+    "recommended_time_space": "You should aim for O(1) time per operation."
+  },
+  {
+    "sno": 103,
+    "title": "Randomized Set",
+    "problem": "Design a set supporting insert, remove, and getRandom in average O(1) time.",
+    "hint": "HashMap for locations, array for values.",
+    "recommended_time_space": "You should aim for O(1) time per operation."
+  },
+  {
+    "sno": 104,
+    "title": "Basic Calculator",
+    "problem": "Implement a basic calculator to evaluate string expressions with '+', '-', '(', ')', and non-negative integers.",
+    "hint": "Use two stacks or keep a running sum and sign, process each token.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  },
+  {
+    "sno": 105,
+    "title": "Largest Rectangle in Histogram",
+    "problem": "Given an array of heights, find the largest rectangle that can be formed in the histogram.",
+    "hint": "Use a stack to track boundaries and compute area efficiently.",
+    "recommended_time_space": "You should aim for O(n) time and O(n) space."
+  }
+]
