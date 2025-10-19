@@ -48,7 +48,10 @@ class Solution:
         if len(edges) >  n-1:
             return False
             
-        adj =[[] for _ in range(n)]
+        from collections import defaultdict
+
+        adj = defaultdict(list)
+
 
         print(n,edges)
         for u,v in edges:

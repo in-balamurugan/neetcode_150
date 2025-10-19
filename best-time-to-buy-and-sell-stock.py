@@ -11,21 +11,17 @@ class Solution:
         You want to maximize your profit by choosing one day to buy and a different future
         day to sell. Return the maximum profit achievable. If no profit is possible, return 0.
         """
-        profit=0
-        lowest_price =prices[0]
-        i=0
-        p_len = len(prices)
 
-        while i < p_len:
-            curr_price = prices[i]
-            lowest_price = min(prices[i], lowest_price)
-            profit=max(profit,curr_price-lowest_price)
-            i +=  1
+        max_profit=0
+        min_price=prices[0]
 
+        for sell in prices:
+            max_profit = max(max_profit, sell - min_price)
+            min_price = min(min_price,sell)
 
-        return profit
+            print(max_profit,sell,min_price)
 
-        
+        return max_profit
 
 
 # ---------- Tests (pytest) ----------

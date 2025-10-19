@@ -18,7 +18,7 @@ class Solution:
 
         for crs,pre in prerequisites:
             preMap[crs].append(pre)
-            visiting=set()
+        visiting=set()
         
         def dfs(crs):
             if crs in visiting:

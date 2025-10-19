@@ -17,6 +17,8 @@ def test_max_profit_with_cooldown(case):
     sol = Solution()
     assert sol.maxProfit(prices) == expected
 
+from functools import lru_cache
+
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
@@ -24,7 +26,7 @@ class Solution:
 
         This method is intentionally left unimplemented for the user to fill in.
         """
-    
+        @lru_cache(None)
         def dfs(i, buying):
             if i >= len(prices):
                 return 0
@@ -36,7 +38,7 @@ class Solution:
                 buy = dfs(i+1, False) - prices[i]
                 return max(buy,cooldown)
             else:
-                sell = dfs(i+2, False) + prices[i]
+                sell = dfs(i+2, True) + prices[i]
                 return max(sell,cooldown)
 
 

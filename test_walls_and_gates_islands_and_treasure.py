@@ -79,12 +79,44 @@ class Solution:
         This method is intentionally left unimplemented for the test harness
         and should raise NotImplementedError.
         """
-        ROWS, COLS = len(grid), len(grid[0])
-        visit = set()
-
-        q = deque()
         
-        def addCell(r,c)
+        ROWS,COLS = len(grid), len(grid[0])
+        visited = set()
+        directions =[[-1,0],[1,0],[0,-1],[0,1]]
+        from collections import deque
+        q=deque()
+
+        def bfs(r,c):
+            if r<0 or c<0 or r >= ROWS or c>= COLS or (r,c) in visited or grid[r][c] == -1:
+                return
+            visited.add((r,c))
+            q.append((r,c))
+
+        for r in range(ROWS):
+            for c in range(COLS):
+                if grid[r][c] ==0:
+                    
+                    visited.add((r,c))
+                    q.append((r,c))
+
+
+
+        distance = 0
+
+        while q:
+            l=len(q)
+            for i in range(l):
+
+                r,c = q.popleft()
+                grid[r][c] = distance
+                
+                for r1,c1 in directions:
+                    bfs(r+r1,c+c1)
+            distance+=1
+                
+
+
+
 
 
 

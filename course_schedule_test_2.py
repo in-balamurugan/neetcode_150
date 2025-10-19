@@ -63,7 +63,6 @@ class Solution:
 
             cycle.remove(crs)
             visit.add(crs)
-            #print(visit)
             output.append(crs)
             print(output)
 

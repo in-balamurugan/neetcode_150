@@ -52,8 +52,7 @@ def test_word_ladder_raises_not_implemented(cases):
     solver = Solution()
     # The target method must exist but be unimplemented (raise NotImplementedError).
     # We assert that calling it raises NotImplementedError.
-    with pytest.raises(NotImplementedError):
-        _ = solver.ladderLength(begin, end, wordList)
+    _ = solver.ladderLength(begin, end, wordList)
 
 
 # -------------------------
@@ -68,85 +67,38 @@ class Solution:
 
         This method is intentionally unimplemented for the tests — it should raise NotImplementedError.
         """
-        if (endWord not in wordList) or (beginWord == endWord):
+
+        if endWord not in wordList:
             return 0
 
-        n = len(wordList)
-        m = len(wordList[0])
-        
-        adj =[[] for _ in range(n)]
-        
-        mp ={}
+        from collections import defaultdict,deque
 
-        for i in range(n):
-            mp[wrodList[i]] ==  i
+        nei = defaultdict(list)
+        wordList.append(beginWord)
+        for word in wordList:
+            for j in range(len(word)):
+                pattern = word[:j] + "*" + word[j + 1 :]
+                nei[pattern].append(word)
 
-
-        for i in range(n):
-            for j in range(i+1,n):
-                
-                cnt =0
-                for k in range(n):
-                    if wordList[i][k] != wordList[j][k]:
-
-                        cnt += 1
-
-                    if cnt==1:
-                        adj[i].append(j)
-                        adj[j].append(i)
-
-
-        q,res = deque(),1
-        visit =set()
-
-        for i in range(m):
-            for c in range(97,123):
-
-                if chr(c) == beginWord[i]:
-                    continue
-
-                word = beginWord[:i] + chr(c) + beginWord[i+1:]
-                
-                if word in mp and mp[word] not in visit:
-
-                    q.append(word)
-                    visit.add(mp[word])
-                
-                while q:
-                    res += 1
-
-                    for i in range(len(q)):
-                        node=q.popleft()
-
-                        if wordList
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-
-
-
-
-
+        visit = set([beginWord])
+        q = deque([beginWord])
+        res = 1
+        while q:
+            for i in range(len(q)):
+                word = q.popleft()
+                if word == endWord:
+                    return res
+                for j in range(len(word)):
+                    pattern = word[:j] + "*" + word[j + 1 :]
+                    for neiWord in nei[pattern]:
+                        if neiWord not in visit:
+                            visit.add(neiWord)
+                            q.append(neiWord)
+            res += 1
+        return 0
 
 
 
 # Call main if run as a script
 if __name__ == "__main__":
     main()
-est_word_ladder.py
