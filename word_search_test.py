@@ -18,8 +18,12 @@ class Solution:
         ]
         word = "ABCCED" -> True
         """
-        if not board:
+
+        if board is None or word is None or not isinstance(board, list) or not all(isinstance(row, list) for row in board) or not isinstance(word, str):
+            raise TypeError("board must be a list of lists and word must be a string")
+        if not board or not board[0]:
             return False
+
         ROWS=len(board) 
         COLS=len(board[0]) 
         
@@ -30,10 +34,7 @@ class Solution:
             if (r<0 or c<0 or r >= ROWS or c >= COLS or word[i] != board[r][c] or board[r][c] == '#'):
                 return False
             board[r][c] = '#'
-            res = (dfs(r + 1, c, i + 1) or
-                   dfs(r - 1, c, i + 1) or
-                   dfs(r, c + 1, i + 1) or
-                   dfs(r, c - 1, i + 1))
+            res = (dfs(r + 1, c, i + 1) or dfs(r - 1, c, i + 1) or dfs(r, c + 1, i + 1) or dfs(r, c - 1, i + 1))
             board[r][c] = word[i]
             return res
 
@@ -91,7 +92,7 @@ def solver():
             [['A','A','A','A'],
              ['A','A','A','A'],
              ['A','A','A','A']],
-            "AAAAAAAAAAAA",
+            "AAAAAAAAAAAAA",
             False
         ),  # longer than total cells
         (

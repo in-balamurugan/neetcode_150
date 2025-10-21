@@ -49,7 +49,7 @@ class Solution:
 
             if i>= len(nums):
                 res.append(subset.copy())
-                print("returning",subset)
+                print("returning",subset,res)
                 return
             subset.append(nums[i])
             dfs(i+1)

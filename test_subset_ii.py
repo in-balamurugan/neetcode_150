@@ -43,26 +43,24 @@ class Solution:
         This method is left intentionally unimplemented for the test scaffold and
         should raise NotImplementedError until a concrete implementation is provided.
         """
-        
-        nums.sort()
-        res=[]
-        subset =[]
+        subset=[]        
+        res = set()
 
-        dfs(i):
+        def dfs(i):
             if i>= len(nums):
-                res.append(subset.copy())
+                res.add(tuple(subset))
                 return
+            
+            subset.append(nums[i])
+            dfs(i+1)
+            subset.pop()
+            dfs(i+1)
 
-            for j in range(i,len(nums):
-                if j>i and nums[j]==nums[j-1]:
-                    continue
-
-            subset.append(j+1)
-            subs
+        nums.sort()
 
         dfs(0)
 
-        return res
+        return [list(s) for s in res ]
 
 if __name__ == "__main__":
     main()
